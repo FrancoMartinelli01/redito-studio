@@ -17,6 +17,7 @@ export function Nav() {
         {[
           { label: 'Proyectos', href: '#proyectos' },
           { label: 'Servicios', href: '#servicios' },
+          { label: 'Automatizaciones', href: '#automatizaciones' },
           { label: 'Proceso', href: '#proceso' },
         ].map(item => (
           <li key={item.href}>

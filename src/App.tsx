@@ -3,6 +3,7 @@ import { Nav } from './components/Nav'
 import { Hero } from './components/Hero'
 import { Projects } from './components/Projects'
 import { Services } from './components/Services'
+import { Automations } from './components/Automations'
 import { Process } from './components/Process'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
@@ -23,6 +24,7 @@ export default function App() {
       <Hero />
       <Projects />
       <Services />
+      <Automations />
       <Process />
       <Contact />
       <Footer />
