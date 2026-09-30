@@ -233,7 +233,7 @@ export function Automations() {
         <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', fontWeight: 700, letterSpacing: '-0.025em' }}>
           Automatizaciones
         </h2>
-        <span style={label}>— 03</span>
+        <span className="sec-index">— 03</span>
       </div>
 
       <div className="fade-up auto-intro">
