@@ -1,13 +1,14 @@
-const services = [
+const services: { num: string; name: string; desc: string; href?: string }[] = [
   { num: '01', name: 'E-commerce', desc: 'Tiendas online con carrito, pagos reales, gestión de stock y notificaciones automáticas.' },
   { num: '02', name: 'Landing pages', desc: 'Páginas de presentación optimizadas para conversión y posicionamiento en Google.' },
   { num: '03', name: 'SEO técnico', desc: 'Google Search Console, sitemap, metadatos y optimización de performance.' },
   { num: '04', name: 'Mantenimiento', desc: 'Actualizaciones, métricas y soporte continuo post-lanzamiento.' },
+  { num: '05', name: 'Automatizaciones', desc: 'Bots de WhatsApp, recordatorios y seguimientos que trabajan solos.', href: '#automatizaciones' },
 ]
 
 export function Services() {
   return (
-    <section id="servicios" style={{ padding: '5rem 3rem', borderBottom: '1px solid var(--border)' }}>
+    <section id="servicios" className="sec" style={{ padding: '5rem 3rem', borderBottom: '1px solid var(--border)' }}>
       <div className="fade-up" style={{
         display: 'flex', alignItems: 'baseline', justifyContent: 'space-between',
         marginBottom: '4rem', paddingBottom: '1.5rem', borderBottom: '1px solid var(--border)',
@@ -18,12 +19,12 @@ export function Services() {
         <span style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: 'var(--muted)', fontFamily: 'var(--serif)' }}>— 02</span>
       </div>
 
-      <div className="fade-up" style={{
-        display: 'grid', gridTemplateColumns: 'repeat(4,1fr)',
+      <div className="fade-up services-grid" style={{
+        display: 'grid', gridTemplateColumns: 'repeat(5,1fr)',
         border: '1px solid var(--border)',
       }}>
         {services.map((s, i) => (
-          <div key={s.num}
+          <div key={s.num} className="services-item"
             style={{
               padding: '2rem 1.75rem',
               borderRight: i < services.length - 1 ? '1px solid var(--border)' : undefined,
@@ -39,6 +40,12 @@ export function Services() {
               {s.name}
             </div>
             <p style={{ fontSize: '0.82rem', color: 'var(--muted)', lineHeight: 1.6 }}>{s.desc}</p>
+            {s.href && (
+              <a href={s.href} style={{
+                display: 'inline-block', marginTop: '1rem', color: 'var(--accent)', textDecoration: 'none',
+                fontSize: '0.8rem', fontWeight: 500, borderBottom: '1px solid var(--accent)', paddingBottom: '1px',
+              }}>Ver más</a>
+            )}
           </div>
         ))}
       </div>

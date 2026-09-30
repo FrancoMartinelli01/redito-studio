@@ -31,7 +31,7 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="proyectos" style={{ padding: '5rem 3rem', borderBottom: '1px solid var(--border)' }}>
+    <section id="proyectos" className="sec" style={{ padding: '5rem 3rem', borderBottom: '1px solid var(--border)' }}>
       <div className="fade-up" style={{
         display: 'flex', alignItems: 'baseline', justifyContent: 'space-between',
         marginBottom: '4rem', paddingBottom: '1.5rem', borderBottom: '1px solid var(--border)',
@@ -49,7 +49,7 @@ export function Projects() {
             href={p.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="fade-up"
+            className="fade-up proj-row"
             style={{
               display: 'grid', gridTemplateColumns: '2fr 3fr 1fr',
               alignItems: 'center', gap: '2rem',
@@ -78,7 +78,7 @@ export function Projects() {
                 {p.type}
               </div>
             </div>
-            <div style={{ fontSize: '0.9rem', color: 'var(--muted)', lineHeight: 1.6, fontWeight: 300 }}>
+            <div className="proj-desc" style={{ fontSize: '0.9rem', color: 'var(--muted)', lineHeight: 1.6, fontWeight: 300 }}>
               {p.desc}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}>

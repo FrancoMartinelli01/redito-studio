@@ -8,7 +8,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="proceso" style={{ padding: '5rem 3rem', borderBottom: '1px solid var(--border)' }}>
+    <section id="proceso" className="sec" style={{ padding: '5rem 3rem', borderBottom: '1px solid var(--border)' }}>
       <div className="fade-up" style={{
         display: 'flex', alignItems: 'baseline', justifyContent: 'space-between',
         marginBottom: '4rem', paddingBottom: '1.5rem', borderBottom: '1px solid var(--border)',
@@ -19,18 +19,18 @@ export function Process() {
         <span style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: 'var(--muted)', fontFamily: 'var(--serif)' }}>— 04</span>
       </div>
 
-      <div className="fade-up" style={{
+      <div className="fade-up process-grid" style={{
         display: 'grid', gridTemplateColumns: 'repeat(5,1fr)',
         border: '1px solid var(--border)',
       }}>
         {steps.map((s, i) => (
-          <div key={s.num} style={{
+          <div key={s.num} className="process-item" style={{
             padding: '2rem 1.5rem',
             borderRight: i < steps.length - 1 ? '1px solid var(--border)' : undefined,
             position: 'relative',
           }}>
             {i < steps.length - 1 && (
-              <div style={{
+              <div className="process-tick" style={{
                 position: 'absolute', top: '2.5rem', right: -1,
                 width: 1, height: 24, background: 'var(--accent)', opacity: 0.4,
               }} />

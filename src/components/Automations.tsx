@@ -160,17 +160,16 @@ function Configurator() {
           Armá tu automatización
         </h3>
         <p style={{ color: 'var(--muted)', fontWeight: 300, maxWidth: 440, marginBottom: '2.5rem' }}>
-          Cuatro preguntas y te armamos una propuesta a medida. Te lleva un minuto.
+          Cuatro preguntas y te armo una propuesta a medida. Te lleva un minuto.
         </p>
         {steps.map((s, i) => (
-          <fieldset key={s.title} style={{ border: 'none', borderTop: '1px solid var(--border)', padding: '1.75rem 0', minWidth: 0 }}>
-            <legend style={{ padding: 0, width: '100%' }}>
-              <span style={{ ...label, display: 'block', marginBottom: '0.6rem' }}>Paso {i + 1} de {steps.length}</span>
-              <span style={{ display: 'block', fontFamily: 'var(--serif)', fontSize: '1.1rem', fontWeight: 700, marginBottom: s.hint ? '0.25rem' : '1.1rem' }}>{s.title}</span>
-              {s.hint && <span style={{ display: 'block', fontSize: '0.8rem', color: 'var(--muted)', marginBottom: '1.1rem' }}>{s.hint}</span>}
-            </legend>
+          <div key={s.title} role="group" aria-labelledby={`paso-${i}`}
+            style={{ borderTop: '1px solid var(--border)', padding: '1.75rem 0' }}>
+            <span style={{ ...label, display: 'block', marginBottom: '0.6rem' }}>Paso {i + 1} de {steps.length}</span>
+            <h4 id={`paso-${i}`} style={{ fontFamily: 'var(--serif)', fontSize: '1.1rem', fontWeight: 700, marginBottom: s.hint ? '0.25rem' : '1rem' }}>{s.title}</h4>
+            {s.hint && <p style={{ fontSize: '0.8rem', color: 'var(--muted)', marginBottom: '1rem' }}>{s.hint}</p>}
             {s.body}
-          </fieldset>
+          </div>
         ))}
       </div>
 
@@ -217,7 +216,7 @@ function Configurator() {
           Enviar por WhatsApp
         </a>
         <p style={{ fontSize: '0.78rem', color: 'var(--muted)', lineHeight: 1.6 }}>
-          Sin compromiso. Te respondemos en menos de 24 horas con alcance y precio cerrado.
+          Sin compromiso. Te respondo en menos de 24 horas con alcance y precio cerrado.
         </p>
       </aside>
     </div>
@@ -246,7 +245,7 @@ export function Automations() {
         </h3>
         <div>
           <p style={{ color: 'var(--muted)', fontWeight: 300, lineHeight: 1.7, marginBottom: '2rem', maxWidth: 440 }}>
-            Armamos automatizaciones que responden consultas, confirman turnos y recuperan ventas por WhatsApp.
+            Armo automatizaciones que responden consultas, confirman turnos y recuperan ventas por WhatsApp.
             Vos seguís con tu negocio; lo repetitivo lo hace el sistema.
           </p>
           <ul style={{ listStyle: 'none' }}>

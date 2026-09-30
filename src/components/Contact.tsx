@@ -13,7 +13,7 @@ const contacts = [
 
 export function Contact() {
   return (
-    <section id="contacto" style={{
+    <section id="contacto" className="sec contact-grid" style={{
       padding: '6rem 3rem',
       display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'center',
     }}>
