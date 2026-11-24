@@ -66,7 +66,7 @@ export function Projects() {
         </div>
         <div className="fade-up pf-intro">
           <p>
-            Sitios reales, en vivo y vendiendo. Scrolleá para recorrerlos o abrí cada caso para ver qué
+            Sitios reales y en línea. Scrolleá para recorrerlos o abrí cada caso para ver qué
             necesitaba el cliente y cómo lo resolvimos.
           </p>
           <div className="pf-filtros" role="group" aria-label="Filtrar proyectos">
