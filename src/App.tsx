@@ -7,6 +7,7 @@ import { Automations } from './components/Automations'
 import { Process } from './components/Process'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
+import { ProjectCase } from './components/ProjectCase'
 
 export default function App() {
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function App() {
       <Process />
       <Contact />
       <Footer />
+      <ProjectCase />
     </>
   )
 }
